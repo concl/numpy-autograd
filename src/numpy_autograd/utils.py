@@ -1,4 +1,4 @@
-from autograd import Tensor
+from numpy_autograd.autograd import Tensor
 import numpy as np
 
 

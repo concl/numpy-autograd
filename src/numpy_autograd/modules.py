@@ -1,5 +1,5 @@
 import numpy as np
-import autograd
+import numpy_autograd.autograd as autograd
 
 
 class Module:

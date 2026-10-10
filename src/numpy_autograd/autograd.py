@@ -1,7 +1,7 @@
 import numpy as np
 
 try:
-    from cuda_kernels import matmul as matmul_cuda
+    from numpy_autograd.cuda_kernels import matmul as matmul_cuda
 
     HAS_CUDA = True
 except ImportError:

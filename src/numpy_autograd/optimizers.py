@@ -1,6 +1,6 @@
 import numpy as np
-import autograd
-import modules
+import numpy_autograd.autograd as autograd
+import numpy_autograd.modules as modules
 
 
 class Optimizer:
