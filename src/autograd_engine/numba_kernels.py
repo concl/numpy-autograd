@@ -4,7 +4,6 @@ from numba import cuda
 
 TPB = 32
 
-
 @cuda.jit
 def _matmul_kernel(a, b, out):
 

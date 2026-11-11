@@ -1,4 +1,4 @@
-from numpy_autograd.autograd import Tensor
+from autograd_engine.engine import Tensor, _same_device, _to_numpy
 import numpy as np
 
 
@@ -7,8 +7,9 @@ def stack(tensors: list[Tensor]) -> Tensor:
     Stack a list of tensors along a new axis.
     Doesn't support autograd since it's only used for batching data, not for model computations.
     """
-    data = np.stack([tensor.data for tensor in tensors], dtype=tensors[0].data.dtype)
-    return Tensor(data, requires_grad=False)
+    device = _same_device(*tensors)
+    data = np.stack([_to_numpy(tensor.data) for tensor in tensors], dtype=tensors[0].data.dtype)
+    return Tensor(data, requires_grad=False, device=device)
 
 
 class Dataset:
