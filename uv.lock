@@ -52,7 +52,8 @@ dependencies = [
     { name = "numpy" },
     { name = "pytest" },
     { name = "torch" },
-    { name = "triton-windows" },
+    { name = "triton", marker = "sys_platform != 'win32'" },
+    { name = "triton-windows", marker = "sys_platform == 'win32'" },
 ]
 
 [package.metadata]
@@ -64,7 +65,8 @@ requires-dist = [
     { name = "numpy", specifier = ">=2.4.4" },
     { name = "pytest", specifier = ">=9.2.0" },
     { name = "torch", index = "https://download.pytorch.org/whl/cu128" },
-    { name = "triton-windows", specifier = ">=3.8.0.post29" },
+    { name = "triton", marker = "sys_platform != 'win32'" },
+    { name = "triton-windows", marker = "sys_platform == 'win32'", specifier = ">=3.8.0.post29" },
 ]
 
 [[package]]
