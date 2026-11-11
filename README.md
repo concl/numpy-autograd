@@ -1,4 +1,2 @@
 # numpy-autograd
-Automatic gradient computation for deep neural networks implemented in NumPy.
-
-CUDA operations with Numba WIP.
+Automatic gradient computation for deep neural networks implemented in NumPy, Numba, and Triton.
